@@ -22,18 +22,32 @@
     <!-- Configure Tailwind to use Inter font and custom color -->
     <script>
         tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        // Custom dark gray color from the forum (used for reference, now using standard gray-900 for nav)
-                        'forum-dark': '#4C5356', 
-                    }
-                },
-            },
-        }
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        'forum-dark': '#4C5356',
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: '1.5rem', // optional: sets default horizontal padding
+          lg: '2rem',
+          xl: '2.5rem',
+        },
+        screens: {
+          sm: '600px',
+          md: '728px',
+          lg: '1000px',
+          xl: '1200px',
+          '2xl': '1200px',
+        },
+      },
+    },
+  },
+}
     </script>
     <!-- Import Inter font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
